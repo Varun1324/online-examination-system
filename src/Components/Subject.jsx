@@ -30,7 +30,7 @@ const Subject = () => {
                 <Button onClick={submitHandler} color='red'>Logout</Button>
             </div>
             <div className="cont" style={{display:'flex',justifyContent:'space-around',padding:'2%',flexWrap:'wrap', background: 'linear-gradient(90deg, #1CB5E0 0%, #000851 100%)'}}>
-            <Card>
+            <Card style={{borderRadius:'10px'}}>
                 <Image src='https://res.cloudinary.com/durc5ydxo/image/upload/v1736865341/freepik__the-style-is-candid-image-photography-with-natural__62429_abejhi.jpg' fluid/>
                 <CardContent>
                     <CardHeader>General Quiz</CardHeader>
@@ -47,7 +47,7 @@ const Subject = () => {
                     </a>
                 </CardContent>
             </Card>
-            <Card>
+            <Card style={{borderRadius:'10px'}}>
                 <Image src='https://res.cloudinary.com/durc5ydxo/image/upload/v1736869774/Untitled_design_1_k29wxb.png' fluid/>
                 <CardContent>
                     <CardHeader>Digital</CardHeader>
@@ -64,7 +64,7 @@ const Subject = () => {
                     </a>
                 </CardContent>
             </Card>
-            <Card>
+            <Card style={{borderRadius:'10px'}}>
                 <Image src='https://res.cloudinary.com/durc5ydxo/image/upload/v1736870051/Untitled_design_2_tnc71m.png' fluid/>
                 <CardContent>
                     <CardHeader>Business</CardHeader>
