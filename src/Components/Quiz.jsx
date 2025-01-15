@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';  // For navigation
+import { useNavigate } from 'react-router-dom';  
 import { Header, Button, Icon, Message, MessageHeader, Container, Form, FormField, Radio } from 'semantic-ui-react';
-import Result from './Result';
 const Quiz = () => {
-    const [time, setTime] = useState(600);  // Set exam duration in seconds (e.g., 600 seconds = 10 minutes)
+    const [time, setTime] = useState(600);  
     const [isRunning, setIsRunning] = useState(true);
     const [answers, setAnswers] = useState({});
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [score,setScore] = useState(0);
-    const navigate = useNavigate();  // Hook for navigation
+    const navigate = useNavigate();  
     useEffect(() => {
         let timer;
         if (isRunning && time > 0) {
@@ -20,8 +19,7 @@ const Quiz = () => {
             submitHandler();
         }
         return () => clearInterval(timer);
-    }, [isRunning, time, isSubmitted, navigate]);
-    
+    }, [isRunning, time, isSubmitted, navigate])
 
     const minutes = Math.floor(time / 60);
     const seconds = time % 60;
@@ -38,16 +36,13 @@ const Quiz = () => {
         q8: 'A',
         q9: 'A',
         q10: 'C',
-    };
-
+    }
     const handleAnswerChange = (question, value) => {
         setAnswers({
             ...answers,
             [question]: value,
         });
-    };
-
-
+    }
     const submitHandler = () => {
         let calculatedScore = 0;
         for (const question in correctAnswers) {
@@ -55,11 +50,9 @@ const Quiz = () => {
                 calculatedScore += 1;
             }
         }
-        setScore(calculatedScore);  // Update state (optional, for display elsewhere if needed)
-        setIsRunning(false);        // Stop the timer
-        setIsSubmitted(true);       // Set submitted flag
-    
-        // Pass the calculated score directly to the result page
+        setScore(calculatedScore);  
+        setIsRunning(false);       
+        setIsSubmitted(true);      
         navigate('/result', { state: { score: calculatedScore, answers } });
     };
     

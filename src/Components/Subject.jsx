@@ -20,10 +20,9 @@ const Subject = () => {
     const startTest = () => {
         navigate('/quiz');
     }
-    const [open, setOpen] = useState(false); // State to control modal visibility
-
-    const showModal = () => setOpen(true);  // Function to show modal
-    const closeModal = () => setOpen(false); // Function to close modal
+    const [open, setOpen] = useState(false);
+    const showModal = () => setOpen(true); 
+    const closeModal = () => setOpen(false); 
     return (
         <div>
             <div className="navbar" style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'0.5%',scrollBehavior:'smooth',position:'sticky',top:'0',zIndex:'100',background:'white'}}>

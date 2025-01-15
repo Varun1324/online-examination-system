@@ -16,12 +16,10 @@ const Result = () => {
     return (
         <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',height:'100vh'}}>
             <h1>RESULT</h1>
-            {
-                
+            {  
                 icon?<Icon name='check circle' color='green' size='massive' />:<Icon name='times circle' color='red' size='massive' />
             }
             <h3>Your Score : {score}</h3>
-            {/* Render additional data as needed */}
         </div>
     );
 };

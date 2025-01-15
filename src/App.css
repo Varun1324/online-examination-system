@@ -18,8 +18,7 @@ label{
     .loginbody {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centers the child elements horizontally */
-        /* Adds padding for better spacing */
+        align-items: center;
     }
     .image{
         width: 200px;
